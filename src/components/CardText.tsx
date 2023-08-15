@@ -4,7 +4,7 @@ import "../App.css";
 const CardText = () => {
   return (
     <>
-      <h1 className=" md:whitespace-nowrap text-dark-slate-greys text-[44px] font-bold mt-[30px] mb-[20px]">
+      <h1 className=" md:whitespace-normal text-dark-slate-greys text-[44px] font-bold mt-[30px] mb-[20px]">
         Stay updated!
       </h1>
       <p className="text-charcoal-greys">
