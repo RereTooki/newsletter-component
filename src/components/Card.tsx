@@ -9,13 +9,13 @@ const Card = () => {
   return (
     <>
       <div className="flex flex-col md:bg-charcoal-greys font-roboto  md:justify-center md:items-center md:h-screen md:py-[55px]">
-        <div className="md:h-[425px] md:bg-whites md:flex-row-reverse flex flex-col rounded-[35px] ">
+        <div className="md:h-[80vh] md:bg-whites md:flex-row-reverse flex flex-col rounded-[25px] ">
           <img
-            className="md:w-2/6 md:h-max md:truncate backgroundss"
+            className=" relative top-[-18px] md:w-3/6 md:h-[70vh] md:mt-[65px]"
             src={SignUpDesktop}
             alt="A sign-up picture"
           />
-          <div className="md:w-4/6">
+          <div className="md:w-3/6  md:mt-[85px]">
             <CardBody />
           </div>
         </div>
