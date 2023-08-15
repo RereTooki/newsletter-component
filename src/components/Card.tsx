@@ -11,7 +11,7 @@ const Card = () => {
       <div className=" h-full w-full flex flex-col md:bg-charcoal-greys font-roboto  md:justify-center md:items-center md:h-max md:py-[55px]">
         <div className=" md:w-fit md:h-fit object-cover md:bg-whites md:justify-center md:items-center md:flex-row-reverse flex flex-col rounded-[25px] ">
           <img
-            className="md:h-1/2 relative top-[-20px] md:top-0  md:py-[15px] md:w-fit  md:px-[25px]  "
+            className="md:h-1/2 relative top-[-20px] md:top-0  md:py-[15px] md:w-1/2  md:px-[25px]  "
             src={SignUpDesktop}
             alt="A sign-up picture"
           />
