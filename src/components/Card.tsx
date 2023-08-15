@@ -7,9 +7,8 @@ import SignUpMobile from "../assets/images/illustration-sign-up-mobile.svg";
 const Card = () => {
   return (
     <>
-      <div className="flex flex-col bg-tomatos font-roboto ">
+      <div className="flex flex-col bg-whites font-roboto ">
         <img className="" src={SignUpMobile} alt="A sign-up picture" />
-        aaa
         <CardBody />
       </div>
     </>
