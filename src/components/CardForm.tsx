@@ -21,7 +21,7 @@ const CardForm = () => {
         </div>
 
         <button
-          className=" mt-[25px] mb-[30px] text-whites p-[10px] rounded-[5px] bg-dark-slate-greys w-full"
+          className=" mt-[25px] mb-[30px] text-whites p-[10px] rounded-[5px] bg-dark-slate-greys hover:gradient w-full shadow-lg hover:shadow-tomatos/70"
           type="submit"
         >
           Subscribe to monthly newsletter

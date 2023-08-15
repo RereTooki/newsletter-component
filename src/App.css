@@ -7,4 +7,14 @@
   font-size: 16px;
 
 }
+@layer components {
+  /* ... */
+  .gradient {
+    background: rgb(255,82,123);
+    background: linear-gradient(90deg, rgba(255,82,123,1) 46%, rgba(255,106,58,1) 79%);
+  }
+
+}
+
+
 
