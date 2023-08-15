@@ -11,8 +11,8 @@ const Card = () => {
       <div className="flex flex-col md:bg-charcoal-greys font-roboto  md:justify-center md:items-center md:h-screen md:py-[55px]">
         <div className="md:h-[425px] md:bg-whites md:flex-row-reverse flex flex-col rounded-[35px] ">
           <img
-            className="md:w-2/6 md:h-max md:truncate"
-            src={SignUpMobile}
+            className="md:w-2/6 md:h-max md:truncate backgroundss"
+            src={SignUpDesktop}
             alt="A sign-up picture"
           />
           <div className="md:w-4/6">
