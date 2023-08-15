@@ -8,10 +8,16 @@ import SignUpDesktop from "../assets/images/illustration-sign-up-desktop.svg";
 const Card = () => {
   return (
     <>
-      <div className="flex flex-col md:bg-charcoal-greys font-roboto  md:justify-center md:items-center md:h-screen">
-        <div className="md:bg-whites md:flex-row-reverse flex flex-col">
-          <img className="" src={SignUpMobile} alt="A sign-up picture" />
-          <CardBody />
+      <div className="flex flex-col md:bg-charcoal-greys font-roboto  md:justify-center md:items-center md:h-screen md:py-[55px]">
+        <div className="md:h-[425px] md:bg-whites md:flex-row-reverse flex flex-col rounded-[35px] ">
+          <img
+            className="md:w-2/6 md:h-max md:truncate"
+            src={SignUpMobile}
+            alt="A sign-up picture"
+          />
+          <div className="md:w-4/6">
+            <CardBody />
+          </div>
         </div>
       </div>
     </>

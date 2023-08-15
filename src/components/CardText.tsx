@@ -4,7 +4,7 @@ import "../App.css";
 const CardText = () => {
   return (
     <>
-      <h1 className=" text-dark-slate-greys text-[44px] font-bold mt-[30px] mb-[20px]">
+      <h1 className=" md:whitespace-nowrap text-dark-slate-greys text-[44px] font-bold mt-[30px] mb-[20px]">
         Stay updated!
       </h1>
       <p className="text-charcoal-greys">
@@ -18,7 +18,7 @@ const CardText = () => {
           <li className="pl-[8px] pb-[15px]">
             Measuring to ensure updates are a success
           </li>
-          <li className="pl-[8px] pb-[45px]">And much more!</li>
+          <li className="pl-[8px] pb-[45px] md:pb-[10px]">And much more!</li>
         </div>
       </ul>
     </>
