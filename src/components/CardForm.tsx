@@ -3,10 +3,12 @@ import "../App.css";
 
 const CardForm = () => {
   const emailRef = useRef<HTMLInputElement>(null);
+  const person = { email: "" };
 
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
-    if (emailRef.current !== null) console.log(emailRef.current.value);
+    if (emailRef.current !== null) person.email = emailRef.current.value;
+    console.log(person);
   };
   return (
     <>
