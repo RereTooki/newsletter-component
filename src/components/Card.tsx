@@ -6,7 +6,7 @@ import SignUpMobile from "../assets/images/illustration-sign-up-mobile.svg";
 import SignUpDesktop from "../assets/images/illustration-sign-up-desktop.svg";
 
 const Card = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
 
   return (
     <>
