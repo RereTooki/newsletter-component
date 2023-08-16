@@ -1,10 +1,14 @@
-import React, { FormEvent } from "react";
+import React, { FormEvent, useState } from "react";
 import "../App.css";
 
 const CardForm = () => {
+  const [person, setPerson] = useState({
+    email: "",
+  });
+
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
-    console.log("Submitted");
+    console.log(person);
   };
   return (
     <>
@@ -17,6 +21,10 @@ const CardForm = () => {
             Email address
           </label>
           <input
+            onChange={(event) =>
+              setPerson({ ...person, email: event.target.value })
+            }
+            value={person.email}
             id="email"
             type="email"
             placeholder="email@company.com"
