@@ -43,7 +43,7 @@ const Card = () => {
       )}
       {isVisible || (
         <>
-          <div className=" h-[88vh] w-screen flex flex-col justify-center items-center  md:bg-charcoal-greys font-roboto  md:justify-center md:items-center md:h-max md:py-[55px]">
+          <div className=" h-[83vh] w-screen flex flex-col justify-center items-center  md:bg-charcoal-greys font-roboto  md:justify-center md:items-center md:h-max md:py-[55px]">
             <div className="bg-whites md:w-fit md:h-fit md:bg-whites md:justify-center md:items-center md:flex-row-reverse px-[15px] md:w-1/2 md:h-1/2 md:justify-center md:items-center">
               <CardBody2 />
             </div>
