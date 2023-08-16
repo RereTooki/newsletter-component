@@ -44,7 +44,7 @@ const Card = () => {
       {isVisible || (
         <>
           <div className=" px-[15px] h-screen w-screen flex flex-col justify-center items-center">
-            <div className="h-[70vh]">
+            <div className="h-[60vh]">
               <CardBody2 />
             </div>
 
