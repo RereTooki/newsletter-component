@@ -10,8 +10,8 @@ const Card = () => {
 
   return (
     <>
-      <div className=" h-full w-full flex flex-col md:bg-charcoal-greys font-roboto  md:justify-center md:items-center md:h-max md:py-[55px]">
-        {isVisible && (
+      {isVisible && (
+        <div className=" h-full w-full flex flex-col md:bg-charcoal-greys font-roboto  md:justify-center md:items-center md:h-max md:py-[55px]">
           <div className=" md:w-fit md:h-fit object-cover md:bg-whites md:justify-center md:items-center md:flex-row-reverse flex flex-col rounded-[25px] ">
             <img
               className="md:h-1/2  md:w-1/2  relative top-[-20px] md:top-0  md:py-[15px] md:px-[25px]  "
@@ -22,37 +22,60 @@ const Card = () => {
               <CardBody onClick={() => setIsVisible(false)} />
             </div>
           </div>
-        )}
-        {isVisible || (
-          <div className=" md:w-fit md:h-fit object-cover md:bg-whites md:justify-center md:items-center md:flex-row-reverse flex flex-col rounded-[25px] ">
-            <div className=" px-[15px] md:w-1/2 md:h-1/2 md:justify-center md:items-center">
+          <div className="attribution">
+            Challenge by{" "}
+            <a
+              href="https://www.frontendmentor.io?ref=challenge"
+              target="_blank"
+            >
+              Frontend Mentor
+            </a>
+            . Coded by{" "}
+            <a
+              href="https://linkedin.com/in/rerel-oluwa-tooki-b53396253/"
+              target="_blank"
+            >
+              Rere Tooki
+            </a>
+            .
+          </div>
+        </div>
+      )}
+      {isVisible || (
+        <>
+          <div className=" h-[88vh] w-screen flex flex-col justify-center items-center  md:bg-charcoal-greys font-roboto  md:justify-center md:items-center md:h-max md:py-[55px]">
+            <div className="bg-whites md:w-fit md:h-fit md:bg-whites md:justify-center md:items-center md:flex-row-reverse px-[15px] md:w-1/2 md:h-1/2 md:justify-center md:items-center">
               <CardBody2 />
-              <div>
-                <button
-                  className="text-whites p-[10px] rounded-[5px] bg-dark-slate-greys hover:gradient w-full shadow-lg hover:shadow-tomatos/70"
-                  type="submit"
-                >
-                  Dismiss message
-                </button>
-              </div>
             </div>
           </div>
-        )}
-        <div className="attribution">
-          Challenge by{" "}
-          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
-            Frontend Mentor
-          </a>
-          . Coded by{" "}
-          <a
-            href="https://linkedin.com/in/rerel-oluwa-tooki-b53396253/"
-            target="_blank"
-          >
-            Rere Tooki
-          </a>
-          .
-        </div>
-      </div>
+          <div className=" md:hidden flex justify-center items-center ">
+            <button
+              className="text-whites p-[20px] rounded-[5px] bg-dark-slate-greys hover:gradient w-[88vw] shadow-lg hover:shadow-tomatos/70"
+              type="submit"
+              onClick={() => setIsVisible(true)}
+            >
+              Dismiss message
+            </button>
+          </div>
+          <div className="attribution">
+            Challenge by{" "}
+            <a
+              href="https://www.frontendmentor.io?ref=challenge"
+              target="_blank"
+            >
+              Frontend Mentor
+            </a>
+            . Coded by{" "}
+            <a
+              href="https://linkedin.com/in/rerel-oluwa-tooki-b53396253/"
+              target="_blank"
+            >
+              Rere Tooki
+            </a>
+            .
+          </div>
+        </>
+      )}
     </>
   );
 };
