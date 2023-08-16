@@ -1,7 +1,11 @@
 import React, { FormEvent, useState } from "react";
 import "../App.css";
 
-const CardForm = () => {
+interface Props {
+  onClick: () => void;
+}
+
+const CardForm = ({ onClick }: Props) => {
   const [person, setPerson] = useState({
     email: "",
   });
@@ -35,6 +39,7 @@ const CardForm = () => {
         <button
           className=" mt-[25px] mb-[30px] text-whites p-[10px] rounded-[5px] bg-dark-slate-greys hover:gradient w-full shadow-lg hover:shadow-tomatos/70"
           type="submit"
+          onClick={onClick}
         >
           Subscribe to monthly newsletter
         </button>

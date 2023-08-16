@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import "../App.css";
 import CardText from "./CardText";
 import CardForm from "./CardForm";
 
-const CardBody = () => {
+interface Props {
+  onClick: () => void;
+}
+
+const CardBody = ({ onClick }: Props) => {
   return (
     <>
       <div className="">
         <CardText />
-        <CardForm />
+        <CardForm onClick={onClick} />
       </div>
     </>
   );
