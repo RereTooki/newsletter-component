@@ -6,7 +6,7 @@ import CardForm from "./CardForm";
 const CardBody = () => {
   return (
     <>
-      <div className="px-[15px]  ">
+      <div className="">
         <CardText />
         <CardForm />
       </div>

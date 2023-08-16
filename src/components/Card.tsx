@@ -15,7 +15,7 @@ const Card = () => {
             src={SignUpDesktop}
             alt="A sign-up picture"
           />
-          <div className="md:w-1/2 md:h-1/2 md:justify-center md:items-center">
+          <div className=" px-[15px] md:w-1/2 md:h-1/2 md:justify-center md:items-center">
             <CardBody />
           </div>
         </div>
