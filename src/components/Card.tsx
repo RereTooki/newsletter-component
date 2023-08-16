@@ -24,11 +24,18 @@ const Card = () => {
           </div>
         )}
         {isVisible || (
-          <div className=" md:w-fit md:h-fit md:bg-whites md:justify-center md:items-center md:flex-row-reverse flex flex-col rounded-[25px] ">
-            <CardBody2 />
-            aaa
-            <CardBody2 />
-            bbb
+          <div className=" md:w-fit md:h-fit object-cover md:bg-whites md:justify-center md:items-center md:flex-row-reverse flex flex-col rounded-[25px] ">
+            <div className=" px-[15px] md:w-1/2 md:h-1/2 md:justify-center md:items-center">
+              <CardBody2 />
+              <div>
+                <button
+                  className="text-whites p-[10px] rounded-[5px] bg-dark-slate-greys hover:gradient w-full shadow-lg hover:shadow-tomatos/70"
+                  type="submit"
+                >
+                  Dismiss message
+                </button>
+              </div>
+            </div>
           </div>
         )}
         <div className="attribution">
