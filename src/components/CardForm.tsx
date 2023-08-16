@@ -1,10 +1,12 @@
-import React, { FormEvent } from "react";
+import React, { FormEvent, useRef } from "react";
 import "../App.css";
 
 const CardForm = () => {
+  const emailRef = useRef<HTMLInputElement>(null);
+
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
-    console.log("Submitted");
+    if (emailRef.current !== null) console.log(emailRef.current.value);
   };
   return (
     <>
@@ -17,6 +19,7 @@ const CardForm = () => {
             Email address
           </label>
           <input
+            ref={emailRef}
             id="email"
             type="email"
             placeholder="email@company.com"
