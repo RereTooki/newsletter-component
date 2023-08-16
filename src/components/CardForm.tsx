@@ -1,10 +1,14 @@
-import React from "react";
+import React, { FormEvent } from "react";
 import "../App.css";
 
 const CardForm = () => {
+  const handleSubmit = (event: FormEvent) => {
+    event.preventDefault();
+    console.log("Submitted");
+  };
   return (
     <>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className=" flex flex-col">
           <label
             htmlFor="email"
