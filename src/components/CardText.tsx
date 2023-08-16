@@ -13,17 +13,17 @@ const CardText = () => {
       <ul className=" mt-[20px] list-none list-image-[url(assets/images/icon-list.svg)] pl-[27px] text-charcoal-greys">
         <div>
           <li className="pl-[8px] pb-[15px]">
-            <div className="relative top-[-5px]">
+            <div className="relative top-[-4px]">
               Product discovery and building what matters
             </div>
           </li>
           <li className="pl-[8px] pb-[15px]">
-            <div className="relative top-[-5px]">
+            <div className="relative top-[-4px]">
               Measuring to ensure updates are a success
             </div>
           </li>
           <li className="pl-[8px] pb-[45px] md:pb-[10px]">
-            <div className="relative top-[-5px]">And much more!</div>
+            <div className="relative top-[-4px]">And much more!</div>
           </li>
         </div>
       </ul>
