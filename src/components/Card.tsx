@@ -43,17 +43,36 @@ const Card = () => {
       )}
       {isVisible || (
         <>
-          <div className="h-screen w-fit bg-tomatos flex flex-row justify-center items-center">
-            <CardBody2 />
-            <CardBody2 />
-            <div className="self-end w-screen mb-[20px]">
+          <div className=" px-[15px] h-screen w-screen flex flex-col justify-center items-center">
+            <div className="h-[70vh]">
+              <CardBody2 />
+            </div>
+
+            <div className="w-full">
               <button
-                className="text-whites rounded-[5px] bg-dark-slate-greys hover:gradient shadow-lg hover:shadow-tomatos/70"
+                className="text-whites w-full py-[15px] rounded-[5px] bg-dark-slate-greys hover:gradient shadow-lg hover:shadow-tomatos/70"
                 type="submit"
                 onClick={() => setIsVisible(true)}
               >
-                Subscribe to monthly newsletter
+                Dismiss message
               </button>
+            </div>
+            <div className="attribution">
+              Challenge by{" "}
+              <a
+                href="https://www.frontendmentor.io?ref=challenge"
+                target="_blank"
+              >
+                Frontend Mentor
+              </a>
+              . Coded by{" "}
+              <a
+                href="https://linkedin.com/in/rerel-oluwa-tooki-b53396253/"
+                target="_blank"
+              >
+                Rere Tooki
+              </a>
+              .
             </div>
           </div>
         </>

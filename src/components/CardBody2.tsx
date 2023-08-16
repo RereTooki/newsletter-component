@@ -5,9 +5,9 @@ import IconSuccess from "../assets/images/icon-success.svg";
 const CardBody2 = () => {
   return (
     <>
-      <div className="rerealign">
+      <div className="bg-whites">
         <img className="" src={IconSuccess} alt="A success icon" />
-        <h1 className="text-dark-slate-greys text-[44px] font-bold mt-[30px] mb-[20px]">
+        <h1 className="leading-[45px] text-dark-slate-greys text-[44px] font-bold mt-[30px] mb-[20px]">
           Thanks for subscribing!
         </h1>
         <p className="text-charcoal-greys">
