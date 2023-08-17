@@ -7,10 +7,10 @@ const CardBody2 = () => {
     <>
       <div className="md:whitespace-nowrap">
         <img className="" src={IconSuccess} alt="A success icon" />
-        <h1 className="leading-[45px] text-dark-slate-greys text-[44px] font-bold mt-[30px] mb-[20px] md:mt-[10px] md:mb-[5px] md:text-[24px] md:leading-[25px]">
+        <h1 className="leading-[45px] text-dark-slate-greys text-[44px] font-bold mt-[30px] mb-[20px] md:mt-[20px]">
           Thanks for subscribing!
         </h1>
-        <p className="text-charcoal-greys md:text-[14px] md:whitespace-normal">
+        <p className="text-charcoal-greys md:whitespace-normal">
           A confirmation email has been sent to <b>rere.</b> Please open it and
           click the button inside to confirm your subscription.
         </p>
