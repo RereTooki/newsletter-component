@@ -76,39 +76,6 @@ const Card = () => {
               .
             </div>
           </div>
-          <div className=" px-[15px] md:bg-charcoal-greys h-screen w-fit md:w-screen md:h-screen md:px-[355px] flex flex-col justify-center items-center">
-            <div className="md:bg-whites md:rounded-[25px] md:pt-[10px] md:pb-[15px] md:px-[15px]">
-              <div className="h-[60vh] md:h-fit md:mb-[20px]">
-                <CardBody2 />
-              </div>
-              <div className="w-full">
-                <button
-                  className="text-whites w-full py-[15px] md:py-[5px] rounded-[5px] bg-dark-slate-greys hover:gradient shadow-lg hover:shadow-tomatos/70"
-                  type="submit"
-                  onClick={() => setIsVisible(true)}
-                >
-                  Dismiss message
-                </button>
-              </div>
-            </div>
-            <div className="attribution md:whitespace-nowrap">
-              Challenge by{" "}
-              <a
-                href="https://www.frontendmentor.io?ref=challenge"
-                target="_blank"
-              >
-                Frontend Mentor
-              </a>
-              . Coded by{" "}
-              <a
-                href="https://linkedin.com/in/rerel-oluwa-tooki-b53396253/"
-                target="_blank"
-              >
-                Rere Tooki
-              </a>
-              .
-            </div>
-          </div>
         </>
       )}
     </>
