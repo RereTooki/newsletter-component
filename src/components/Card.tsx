@@ -43,21 +43,22 @@ const Card = () => {
       )}
       {isVisible || (
         <>
-          <div className=" px-[15px] md:bg-tomatos h-screen w-fit md:w-full flex flex-col justify-center items-center">
-            <div className="h-[60vh] md:h-fit">
-              <CardBody2 />
+          <div className=" px-[15px] md:bg-charcoal-greys h-screen w-fit md:w-screen md:h-screen md:px-[355px] flex flex-col justify-center items-center">
+            <div className="md:bg-whites md:rounded-[25px] md:py-[35px] md:px-[45px]">
+              <div className="h-[60vh] md:h-fit md:mb-[20px]">
+                <CardBody2 />
+              </div>
+              <div className="w-full">
+                <button
+                  className="text-whites w-full py-[15px] rounded-[5px] bg-dark-slate-greys hover:gradient shadow-lg hover:shadow-tomatos/70"
+                  type="submit"
+                  onClick={() => setIsVisible(true)}
+                >
+                  Dismiss message
+                </button>
+              </div>
             </div>
-
-            <div className="w-full">
-              <button
-                className="text-whites w-full py-[15px] rounded-[5px] bg-dark-slate-greys hover:gradient shadow-lg hover:shadow-tomatos/70"
-                type="submit"
-                onClick={() => setIsVisible(true)}
-              >
-                Dismiss message
-              </button>
-            </div>
-            <div className="attribution">
+            <div className="attribution md:whitespace-nowrap">
               Challenge by{" "}
               <a
                 href="https://www.frontendmentor.io?ref=challenge"
