@@ -1,4 +1,5 @@
 import React, { FormEvent, useState } from "react";
+import { FieldValues, useForm } from "react-hook-form";
 import "../App.css";
 import CardBody from "./CardBody";
 import CardBody2 from "./CardBody2";
@@ -6,17 +7,37 @@ import SignUpMobile from "../assets/images/illustration-sign-up-mobile.svg";
 import SignUpDesktop from "../assets/images/illustration-sign-up-desktop.svg";
 
 const Card = () => {
-  const [isVisible, setIsVisible] = useState(true);
-  const [person, setPerson] = useState({
-    email: "",
+  const [persons, setPersons] = useState({
+    emails: "",
   });
 
+  const { register, handleSubmit, getValues } = useForm();
+  const onSubmit = (data: FieldValues) => {
+    console.log(data);
+    console.log(data.email);
+    const rere = data.email;
+    console.log("the value of rere is " + rere);
+
+    console.log("the value of person.email is " + persons.emails);
+  };
+
+  //SH4
+  //console.log(register("email"));
+
+  const [isVisible, setIsVisible] = useState(true);
+
+  //Using the state hook to manage the input form SH1
+  // const [person, setPerson] = useState({
+  //   email: "",
+  // });
+
+  //SH2
   // const handleSubmit = (event: FormEvent) => {
   //   event.preventDefault();
   //   console.log(person);
-  //   //console.log(person.email);
-  //   //const rere = person.email;
-  //   //console.log(rere + "is the value of rere");
+  //   //   //console.log(person.email);
+  //   //   //const rere = person.email;
+  //   //   //console.log(rere + "is the value of rere");
   // };
 
   return (
@@ -32,8 +53,7 @@ const Card = () => {
             <div className=" px-[15px] md:w-1/2 md:h-1/2 md:justify-center md:items-center">
               <CardBody //onClick={() => setIsVisible(false)}
               />
-              <form //onSubmit={handleSubmit}
-              >
+              <form onSubmit={handleSubmit(onSubmit)}>
                 <div className=" flex flex-col">
                   <label
                     htmlFor="email"
@@ -42,10 +62,12 @@ const Card = () => {
                     Email address
                   </label>
                   <input
-                    onChange={(event) =>
-                      setPerson({ ...person, email: event.target.value })
-                    }
-                    value={person.email}
+                    // SH3
+                    // onChange={(event) =>
+                    //   setPerson({ ...person, email: event.target.value })
+                    // }
+                    // value={person.email}
+                    {...register("email")}
                     id="email"
                     type="email"
                     placeholder="email@company.com"
@@ -56,7 +78,11 @@ const Card = () => {
                 <button
                   className=" mt-[25px] mb-[30px] text-whites p-[10px] rounded-[5px] bg-dark-slate-greys hover:gradient w-full shadow-lg hover:shadow-tomatos/70"
                   type="submit"
-                  onClick={() => setIsVisible(false)}
+                  onClick={() => {
+                    setIsVisible(true);
+                    const singleValue = getValues("email");
+                    setPersons({ ...persons, emails: singleValue });
+                  }}
                 >
                   Subscribe to monthly newsletter
                 </button>
@@ -87,7 +113,7 @@ const Card = () => {
           <div className=" px-[15px] md:bg-charcoal-greys h-screen w-fit md:w-screen md:h-screen md:px-[355px] flex flex-col justify-center items-center">
             <div className="md:bg-whites md:rounded-[25px] md:pt-[10px] md:pb-[15px] md:px-[15px]">
               <div className="h-[60vh] md:h-fit md:mb-[20px]">
-                <CardBody2 emailconfirm={person.email} />
+                <CardBody2 emailconfirm={persons.emails} />
               </div>
               <div className="w-full">
                 <button
