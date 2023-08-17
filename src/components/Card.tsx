@@ -11,13 +11,13 @@ const Card = () => {
     email: "",
   });
 
-  const handleSubmit = (event: FormEvent) => {
-    event.preventDefault();
-    console.log(person);
-    console.log(person.email);
-    const rere = person.email;
-    console.log(rere + "is the value of rere");
-  };
+  // const handleSubmit = (event: FormEvent) => {
+  //   event.preventDefault();
+  //   console.log(person);
+  //   //console.log(person.email);
+  //   //const rere = person.email;
+  //   //console.log(rere + "is the value of rere");
+  // };
 
   return (
     <>
@@ -32,7 +32,8 @@ const Card = () => {
             <div className=" px-[15px] md:w-1/2 md:h-1/2 md:justify-center md:items-center">
               <CardBody //onClick={() => setIsVisible(false)}
               />
-              <form onSubmit={handleSubmit}>
+              <form //onSubmit={handleSubmit}
+              >
                 <div className=" flex flex-col">
                   <label
                     htmlFor="email"
@@ -55,7 +56,7 @@ const Card = () => {
                 <button
                   className=" mt-[25px] mb-[30px] text-whites p-[10px] rounded-[5px] bg-dark-slate-greys hover:gradient w-full shadow-lg hover:shadow-tomatos/70"
                   type="submit"
-                  //onClick={onClick}
+                  onClick={() => setIsVisible(false)}
                 >
                   Subscribe to monthly newsletter
                 </button>
@@ -86,7 +87,7 @@ const Card = () => {
           <div className=" px-[15px] md:bg-charcoal-greys h-screen w-fit md:w-screen md:h-screen md:px-[355px] flex flex-col justify-center items-center">
             <div className="md:bg-whites md:rounded-[25px] md:pt-[10px] md:pb-[15px] md:px-[15px]">
               <div className="h-[60vh] md:h-fit md:mb-[20px]">
-                <CardBody2 />
+                <CardBody2 emailconfirm={person.email} />
               </div>
               <div className="w-full">
                 <button

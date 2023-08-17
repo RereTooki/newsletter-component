@@ -2,7 +2,11 @@ import React from "react";
 import "../App.css";
 import IconSuccess from "../assets/images/icon-success.svg";
 
-const CardBody2 = () => {
+interface Props {
+  emailconfirm: string;
+}
+
+const CardBody2 = ({ emailconfirm }: Props) => {
   return (
     <>
       <div className="md:whitespace-nowrap">
@@ -11,8 +15,8 @@ const CardBody2 = () => {
           Thanks for subscribing!
         </h1>
         <p className="text-charcoal-greys md:whitespace-normal">
-          A confirmation email has been sent to <b>rere.</b> Please open it and
-          click the button inside to confirm your subscription.
+          A confirmation email has been sent to <b>{emailconfirm}.</b> Please
+          open it and click the button inside to confirm your subscription.
         </p>
       </div>
     </>
