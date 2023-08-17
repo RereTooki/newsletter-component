@@ -6,19 +6,24 @@ import CardBody2 from "./CardBody2";
 import SignUpMobile from "../assets/images/illustration-sign-up-mobile.svg";
 import SignUpDesktop from "../assets/images/illustration-sign-up-desktop.svg";
 
+interface FormData {
+  email: string;
+}
+
 const Card = () => {
   const [persons, setPersons] = useState({
     emails: "",
   });
 
-  const { register, handleSubmit, getValues } = useForm();
+  const {
+    register,
+    handleSubmit,
+    getValues,
+    formState: { errors },
+  } = useForm<FormData>();
+
   const onSubmit = (data: FieldValues) => {
     console.log(data);
-    console.log(data.email);
-    const rere = data.email;
-    console.log("the value of rere is " + rere);
-
-    console.log("the value of person.email is " + persons.emails);
   };
 
   //SH4
@@ -55,19 +60,34 @@ const Card = () => {
               />
               <form onSubmit={handleSubmit(onSubmit)}>
                 <div className=" flex flex-col">
-                  <label
-                    htmlFor="email"
-                    className="text-dark-slate-greys text-[12px] font-bold mb-[5px]"
-                  >
-                    Email address
-                  </label>
+                  <div className=" flex flex-row justify-between">
+                    <label
+                      htmlFor="email"
+                      className="text-dark-slate-greys text-[12px] font-bold mb-[5px]"
+                    >
+                      Email address
+                    </label>
+                    {errors.email?.type === "required" && (
+                      <p className="  text-tomatos text-[12px] font-bold mb-[5px]">
+                        The email field is required
+                      </p>
+                    )}
+                    {errors.email?.type === "minLength" && (
+                      <p className="  text-tomatos text-[12px] font-bold mb-[5px]">
+                        Insufficient characters (8)
+                      </p>
+                    )}
+                  </div>
                   <input
                     // SH3
                     // onChange={(event) =>
                     //   setPerson({ ...person, email: event.target.value })
                     // }
                     // value={person.email}
-                    {...register("email")}
+                    {...register("email", {
+                      required: true,
+                      minLength: 8,
+                    })}
                     id="email"
                     type="email"
                     placeholder="email@company.com"
@@ -80,6 +100,7 @@ const Card = () => {
                   type="submit"
                   onClick={() => {
                     setIsVisible(true);
+                    console.log(errors.email?.type);
                     const singleValue = getValues("email");
                     setPersons({ ...persons, emails: singleValue });
                   }}
