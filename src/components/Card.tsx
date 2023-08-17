@@ -74,7 +74,7 @@ const Card = () => {
                     )}
                     {errors.email?.type === "minLength" && (
                       <p className="  text-tomatos text-[12px] font-bold mb-[5px]">
-                        Insufficient characters (8)
+                        Insufficient characters (3)
                       </p>
                     )}
                   </div>
@@ -99,10 +99,17 @@ const Card = () => {
                   className=" mt-[25px] mb-[30px] text-whites p-[10px] rounded-[5px] bg-dark-slate-greys hover:gradient w-full shadow-lg hover:shadow-tomatos/70"
                   type="submit"
                   onClick={() => {
-                    setIsVisible(true);
-                    console.log(errors.email?.type);
+                    console.log(errors.email);
                     const singleValue = getValues("email");
                     setPersons({ ...persons, emails: singleValue });
+                    console.log("length is " + persons.emails.length);
+                    console.log(typeof persons.emails.length);
+                    console.log(persons.emails.length);
+                    {
+                      persons.emails.length >= 2
+                        ? setIsVisible(false)
+                        : setIsVisible(true);
+                    }
                   }}
                 >
                   Subscribe to monthly newsletter
