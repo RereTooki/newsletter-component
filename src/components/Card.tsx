@@ -100,16 +100,13 @@ const Card = () => {
                   className=" mt-[25px] mb-[30px] text-whites p-[10px] rounded-[5px] bg-dark-slate-greys hover:gradient w-full shadow-lg hover:shadow-tomatos/70"
                   type="submit"
                   onClick={() => {
-                    console.log(errors.email);
                     const singleValue = getValues("email");
                     setPersons({ ...persons, emails: singleValue });
-                    console.log(persons.emails.lastIndexOf("@"));
 
                     {
                       errors.email?.type === "minLength" ||
                       errors.email?.type === "required" ||
-                      persons.emails.includes("@") !== true ||
-                      persons.emails.lastIndexOf("@") == persons.emails.length
+                      persons.emails.includes("@") !== true
                         ? setIsVisible(true)
                         : setIsVisible(false);
                     }
