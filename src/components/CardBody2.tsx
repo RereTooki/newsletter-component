@@ -1,4 +1,3 @@
-import React from "react";
 import "../App.css";
 import IconSuccess from "../assets/images/icon-success.svg";
 

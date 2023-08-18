@@ -1,9 +1,8 @@
-import React, { FormEvent, useState } from "react";
+import { useState } from "react";
 import { FieldValues, useForm } from "react-hook-form";
 import "../App.css";
 import CardBody from "./CardBody";
 import CardBody2 from "./CardBody2";
-import SignUpMobile from "../assets/images/illustration-sign-up-mobile.svg";
 import SignUpDesktop from "../assets/images/illustration-sign-up-desktop.svg";
 
 interface FormData {
@@ -27,24 +26,7 @@ const Card = () => {
     console.log(data);
   };
 
-  //SH4
-  //console.log(register("email"));
-
   const [isVisible, setIsVisible] = useState(true);
-
-  //Using the state hook to manage the input form SH1
-  // const [person, setPerson] = useState({
-  //   email: "",
-  // });
-
-  //SH2
-  // const handleSubmit = (event: FormEvent) => {
-  //   event.preventDefault();
-  //   console.log(person);
-  //   //   //console.log(person.email);
-  //   //   //const rere = person.email;
-  //   //   //console.log(rere + "is the value of rere");
-  // };
 
   return (
     <>
@@ -57,8 +39,7 @@ const Card = () => {
               alt="A sign-up picture"
             />
             <div className=" px-[15px] md:w-1/2 md:h-1/2 md:justify-center md:items-center">
-              <CardBody //onClick={() => setIsVisible(false)}
-              />
+              <CardBody />
               <form onSubmit={handleSubmit(onSubmit)}>
                 <div className=" flex flex-col">
                   <div className=" flex flex-row justify-between">
@@ -80,11 +61,6 @@ const Card = () => {
                     )}
                   </div>
                   <input
-                    // SH3
-                    // onChange={(event) =>
-                    //   setPerson({ ...person, email: event.target.value })
-                    // }
-                    // value={person.email}
                     {...register("email", {
                       required: true,
                       minLength: 4,
