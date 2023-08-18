@@ -19,6 +19,7 @@ const Card = () => {
     register,
     handleSubmit,
     getValues,
+    setValue,
     formState: { errors },
   } = useForm<FormData>();
 
@@ -74,7 +75,7 @@ const Card = () => {
                     )}
                     {errors.email?.type === "minLength" && (
                       <p className="  text-tomatos text-[12px] font-bold mb-[5px]">
-                        Insufficient characters (3)
+                        At least 4 characters required
                       </p>
                     )}
                   </div>
@@ -86,7 +87,7 @@ const Card = () => {
                     // value={person.email}
                     {...register("email", {
                       required: true,
-                      minLength: 8,
+                      minLength: 4,
                     })}
                     id="email"
                     type="email"
@@ -102,13 +103,15 @@ const Card = () => {
                     console.log(errors.email);
                     const singleValue = getValues("email");
                     setPersons({ ...persons, emails: singleValue });
-                    console.log("length is " + persons.emails.length);
-                    console.log(typeof persons.emails.length);
-                    console.log(persons.emails.length);
+                    console.log(persons.emails.lastIndexOf("@"));
+
                     {
-                      persons.emails.length >= 2
-                        ? setIsVisible(false)
-                        : setIsVisible(true);
+                      errors.email?.type === "minLength" ||
+                      errors.email?.type === "required" ||
+                      persons.emails.includes("@") !== true ||
+                      persons.emails.lastIndexOf("@") == persons.emails.length
+                        ? setIsVisible(true)
+                        : setIsVisible(false);
                     }
                   }}
                 >
@@ -147,7 +150,10 @@ const Card = () => {
                 <button
                   className="text-whites w-full py-[15px] md:py-[5px] rounded-[5px] bg-dark-slate-greys hover:gradient shadow-lg hover:shadow-tomatos/70"
                   type="submit"
-                  onClick={() => setIsVisible(true)}
+                  onClick={() => {
+                    setIsVisible(true);
+                    setValue("email", "");
+                  }}
                 >
                   Dismiss message
                 </button>
